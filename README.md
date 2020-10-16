@@ -5,7 +5,7 @@
 ## 互動式查詢網址
 > [點我](https://howard-haowen.github.io/Formosan-languages/)
 
-<img align="right" height="250px" alt="GIF" src="https://i.pinimg.com/originals/e4/26/70/e426702edf874b181aced1e2fa5c6cde.gif" />
+<img align="right" height="200px" alt="GIF" src="https://i.pinimg.com/originals/e4/26/70/e426702edf874b181aced1e2fa5c6cde.gif" />
 
 ## 資料來源
 - 🥅 九階教材: [族語E樂園](http://web.klokah.tw)
@@ -20,7 +20,8 @@
 ## 使用方式
 - 點選`+`可篩選來源和語言😎
 - 在「族語」和「中文」方塊中輸入查詢字串可跨語言查詢🥳
+- 預設顯示排灣語資料，點選`語言_方言`下方的`Ｘ`可取消篩選條件🧐
 - 預設顯示20筆資料，點選表格右上角的`>`可查看下一頁😁
-- 互動式表格將顯示於下方，載入資料需要時間，請耐心等候😇
+- 互動式表格將顯示於下方，首次載入資料需要時間，請耐心等候😇
 
-<iframe referrerpolicy="no-referrer-when-downgrade" height="1000" width="100%" style="border:none;" src="https://view-awesome-table.com/-MJlx3iyg49vqwVF44rP/view"></iframe>
+<iframe referrerpolicy="no-referrer-when-downgrade" height="1000" width="100%" style="border:none;" src="https://view-awesome-table.com/-MJlx3iyg49vqwVF44rP/view?filterA=%E6%8E%92%E7%81%A3_%E5%8C%97"></iframe>
