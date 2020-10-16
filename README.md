@@ -5,9 +5,9 @@
 ## 互動式查詢網址
 > [點我](https://howard-haowen.github.io/Formosan-languages/)
 
-<img align="right" height="200px" alt="GIF" src="https://i.pinimg.com/originals/e4/26/70/e426702edf874b181aced1e2fa5c6cde.gif" />
-
 ## 資料來源
+<img align="right" height="20px" alt="GIF" src="https://i.pinimg.com/originals/e4/26/70/e426702edf874b181aced1e2fa5c6cde.gif" />
+
 - 🥅 九階教材: [族語E樂園](http://web.klokah.tw)
 - 💬 生活會話: [族語E樂園](http://web.klokah.tw)
 - 🧗 句型: [族語E樂園](http://web.klokah.tw)
