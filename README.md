@@ -13,13 +13,14 @@
 - 🧗 句型: [族語E樂園](http://web.klokah.tw)
 - 🔭 文法: [臺灣南島語言叢書](https://alilin.apc.gov.tw/tw/)
 - 📚 詞典: [原住民族語言線上詞典](https://e-dictionary.apc.gov.tw/Index.htm?fbclid=IwAR18XBJPj2xs7nhpPlIUZ-P3joQRGXx22rbVcUvp14ysQu6SdrWYvo7gWCc)
+- 🎢 資料集合計`139102`筆族語-華語句對
 
 >‼️此查詢系統僅供教學與研究之用，內容版權歸原始資料提供者所有。
 
 ## 使用方式
-- 資料集共有`139102`筆族語-華語句對
-- 可點選`+`以篩選來源和語言
-- 可在「族語」和「中文」方塊中輸入查詢字串
-- 預設顯示20筆資料，點選表格右上角的`>`可查看下一頁
+- 點選`+`可篩選來源和語言😎
+- 在「族語」和「中文」方塊中輸入查詢字串可跨語言查詢🥳
+- 預設顯示20筆資料，點選表格右上角的`>`可查看下一頁😁
+- 互動式表格將顯示於下方，載入資料需要時間，請耐心等候😇
 
 <iframe referrerpolicy="no-referrer-when-downgrade" height="1000" width="100%" style="border:none;" src="https://view-awesome-table.com/-MJlx3iyg49vqwVF44rP/view"></iframe>
