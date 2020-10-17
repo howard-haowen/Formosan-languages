@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html>
-<title>台灣南島語-華語句庫資料集(Dataset of Formosan-Mandarin sentence pairs)</title>
-
-<xmp theme="simplex" style="display:none;">
-  
 # 台灣南島語-華語句庫資料集(Dataset of Formosan-Mandarin sentence pairs)
   
 ## 互動式查詢系統網址
@@ -32,8 +26,3 @@
 - 互動式表格將顯示於下方，首次載入資料需要時間，請耐心等候😇
 
 <iframe referrerpolicy="no-referrer-when-downgrade" height="1000" width="100%" style="border:none;" src="https://view-awesome-table.com/-MJlx3iyg49vqwVF44rP/view?filterA=%E6%8E%92%E7%81%A3_%E5%8C%97"></iframe>
-
-</xmp>
-
-<script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
-</html>
