@@ -1,10 +1,11 @@
-# 台灣南島語-華語句對資料集(Formosan-Chinese sentence pairs)
+# 台灣南島語-華語句庫資料集(Dataset of Formosan-Chinese sentence pairs)
 
 ![Matrix SVG](https://raw.githubusercontent.com/rodrigograca31/rodrigograca31/master/matrix.svg)
 
 ## 互動式表格查詢網址
 
 > [點我](https://howard-haowen.github.io/Formosan-languages/)
+- 🎢 資料集合計`139102`筆句對。
 
 ## 資料來源
 <img align="right" height="220px" alt="GIF" src="https://i.pinimg.com/originals/e4/26/70/e426702edf874b181aced1e2fa5c6cde.gif" />
@@ -16,7 +17,6 @@
    + 以上來源的資料是透過網路爬蟲取得。
 - 📚 詞典: [原住民族語言線上詞典](https://e-dictionary.apc.gov.tw/Index.htm?fbclid=IwAR18XBJPj2xs7nhpPlIUZ-P3joQRGXx22rbVcUvp14ysQu6SdrWYvo7gWCc)
    + 詞典資料是透過`PDFMiner` 將2019版的PDF檔轉成HTML，再用`BeautifulSoup`抓取句對，偶爾會出現族語跟華語對不上的情形。若發現錯誤，請聯絡我📩。詞典中重複出現的句子已從資料集中刪除。
-- 🎢 資料集合計`139102`筆句對。
 
 >‼️此查詢系統僅供教學與研究之用，內容版權歸原始資料提供者所有
 
