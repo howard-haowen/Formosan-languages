@@ -1,6 +1,4 @@
-<img src="https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Fhoward-haowen.github.io%2FFormosan-languages%2F" alt="Hits">
-
-![Hits](https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Fhoward-haowen.github.io%2FFormosan-languages%2F)
+![visitors](https://visitor-badge.glitch.me/badge?page_id=howard-haowen.Formosan-languages)
 
 # 台灣南島語-華語句庫資料集(Dataset of Formosan-Mandarin sentence pairs)
 
