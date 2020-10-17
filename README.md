@@ -1,3 +1,9 @@
+---
+title: Dataset of Formosan-Mandarin sentence pairs
+language: Formosan, Mandarin Chinese
+---
+<link rel="stylesheet" type="text/css" media="all" href="https://github.com/jasonlong/cayman-theme/blob/main/css/cayman.css" />
+
 # 台灣南島語-華語句庫資料集(Dataset of Formosan-Mandarin sentence pairs)
   
 ## 互動式查詢系統網址
