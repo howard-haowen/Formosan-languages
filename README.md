@@ -2,13 +2,13 @@
   
 ## 互動式查詢系統網址
 
+<img align="right" height="220px" alt="GIF" src="https://i.pinimg.com/originals/e4/26/70/e426702edf874b181aced1e2fa5c6cde.gif" />
+
 > [點我](https://howard-haowen.github.io/Formosan-languages/)
 - 🎢 資料集合計`139102`筆句對。
 - ‼️ 此查詢系統僅供教學與研究之用，內容版權歸原始資料提供者所有
 
 ## 資料來源
-<img align="right" height="220px" alt="GIF" src="https://i.pinimg.com/originals/e4/26/70/e426702edf874b181aced1e2fa5c6cde.gif" />
-
 - 🥅 九階教材: [族語E樂園](http://web.klokah.tw)
 - 💬 生活會話: [族語E樂園](http://web.klokah.tw)
 - 🧗 句型: [族語E樂園](http://web.klokah.tw)
