@@ -1,3 +1,5 @@
+<link href="https://github.com/markdowncss/splendor/blob/master/css/splendor.css" rel="stylesheet">
+
 # 台灣南島語-華語句庫資料集(Dataset of Formosan-Mandarin sentence pairs)
   
 ## 互動式查詢系統網址
