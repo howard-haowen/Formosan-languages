@@ -5,8 +5,9 @@
 ## 互動式查詢系統網址
 
 > [點我](https://howard-haowen.github.io/Formosan-languages/)
-- 🎢 資料集合計`139102`筆句對。
+- 🎢 資料集合計`139102`筆句對
 - ‼️ 此查詢系統僅供教學與研究之用，內容版權歸原始資料提供者所有
+- 💻[![隨機顯示10筆資料](https://github.com/howard-haowen/Formosan-languages/blob/main/sample_dataframe.png)](https://github.com/howard-haowen/Formosan-languages/blob/main/sample_dataframe.html)
 
 ## 資料來源
 
