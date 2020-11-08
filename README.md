@@ -35,7 +35,5 @@
 - 查詢介面改版中，暫時無法顯示🤖
 ```
 
-***    
-<iframe referrerpolicy="no-referrer-when-downgrade" height="1000" width="100%" style="border:none;" src="https://view-awesome-table.com/-MJlx3iyg49vqwVF44rP/view?filterA=%E6%8E%92%E7%81%A3_%E5%8C%97"></iframe>
 ***
 ![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
