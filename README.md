@@ -9,7 +9,10 @@
 - 🎢 資料集合計`139102`筆句對
 - ‼️ 此查詢系統僅供教學與研究之用，內容版權歸原始資料提供者所有
 - 💻 隨機顯示10筆資料
-<img src="https://github.com/howard-haowen/Formosan-languages/blob/main/sample_dataframe.png"/>
+![data_sample](https://github.com/howard-haowen/Formosan-languages/blob/main/sample_dataframe.png)
+- 💻 資料統計
+<iframe width="600" height="450" src="https://datastudio.google.com/embed/reporting/843e036f-ed11-4f15-97a9-03ee8c21e8a0/page/4WarB" frameborder="0" style="border:0" allowfullscreen></iframe>
+
 
 ## 資料來源
 
