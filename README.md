@@ -22,7 +22,7 @@
 - 🔭 文法: [臺灣南島語言叢書](https://alilin.apc.gov.tw/tw/)
    + 以上來源的資料是透過網路爬蟲取得。
 - 📚 詞典: [原住民族語言線上詞典](https://e-dictionary.apc.gov.tw/Index.htm?fbclid=IwAR18XBJPj2xs7nhpPlIUZ-P3joQRGXx22rbVcUvp14ysQu6SdrWYvo7gWCc)
-   + 詞典資料是透過`PDFMiner` 將2019版的PDF檔轉成HTML，再用`BeautifulSoup`抓取句對，偶爾會出現族語跟華語對不上的情形。若發現錯誤，請聯絡我📩。詞典中重複出現的句子已從資料集中刪除。
+   + 詞典資料是透過`PDFMiner` 將2019版的PDF檔轉成HTML，再用`BeautifulSoup`抓取句對，偶爾會出現族語跟華語對不上的情形。若發現錯誤，請[聯絡我📩](https://github.com/howard-haowen)。詞典中重複出現的句子已從資料集中刪除。
 
 ***
 ![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
