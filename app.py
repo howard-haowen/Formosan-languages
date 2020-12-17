@@ -6,6 +6,8 @@ def main():
   st.subheader("Dataset of Formosan-Mandarin sentence pairs")
   st.markdown(
         """
+![visitors](https://visitor-badge.glitch.me/badge?page_id=howard-haowen.Formosan-languages)
+
 ### 原始碼
 [GitHub頁面](https://github.com/howard-haowen/Formosan-languages)
 
