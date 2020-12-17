@@ -4,7 +4,7 @@
 
 ## 互動式查詢系統網址
 
-> [點我](https://howard-haowen.github.io/Formosan-languages/)
+> [點我](https://share.streamlit.io/howard-haowen/formosan-languages/main/app.py)
 
 - 🎢 資料集合計`139102`筆句對
 - ‼️ 此查詢系統僅供教學與研究之用，內容版權歸原始資料提供者所有
@@ -24,19 +24,7 @@
 - 📚 詞典: [原住民族語言線上詞典](https://e-dictionary.apc.gov.tw/Index.htm?fbclid=IwAR18XBJPj2xs7nhpPlIUZ-P3joQRGXx22rbVcUvp14ysQu6SdrWYvo7gWCc)
    + 詞典資料是透過`PDFMiner` 將2019版的PDF檔轉成HTML，再用`BeautifulSoup`抓取句對，偶爾會出現族語跟華語對不上的情形。若發現錯誤，請聯絡我📩。詞典中重複出現的句子已從資料集中刪除。
 
-## 使用方式
-
-- 點選`+`可篩選來源和語言😎
-- 預設顯示北排灣語資料，點選`語言_方言`下方的`Ｘ`可取消篩選條件🧐
-- 在「族語」或「中文」方塊中輸入文字可跨語言查詢，使用族語查詢時，只需輸入單詞的部分字母即可🥳
-- 預設顯示20筆資料，點選表格右上角的`>`可查看下一頁😁
-- 互動式表格將顯示於下方，首次載入資料需要時間，請耐心等候😇
-
 <img align="left" height="220px" alt="GIF" src="https://i.pinimg.com/originals/e4/26/70/e426702edf874b181aced1e2fa5c6cde.gif" />
-
-```diff
-- 查詢介面改版中，暫時無法顯示🤖
-```
 
 ***
 ![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
