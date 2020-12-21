@@ -94,13 +94,15 @@ def main():
   filt_df = df[(s_filt) & (l_filt)]
   zh_columns = {'Lang_Ch': '語言_方言', 'Ab': '族語', 'Ch': '華語', 'From': '來源'}
   filt_df.rename(columns=zh_columns, inplace=True)
-  st.dataframe(filt_df.astype('str'))
+  st.dataframe(filt_df)
 
 @st.cache
 def get_data():
   df = pd.read_pickle('Formosan-Mandarin_sent_pairs_updated.pkl')
   del df['Num']
-  return df
+  clean_df = df.astype('str')
+  clean_df = clean_df.apply(strip)  
+  return clean_df
 
 if __name__ == '__main__':
   main()
