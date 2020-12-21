@@ -100,9 +100,9 @@ def main():
 def get_data():
   df = pd.read_pickle('Formosan-Mandarin_sent_pairs_updated.pkl')
   del df['Num']
-  clean_df = df.astype('str')
-  clean_df = clean_df.apply(strip)  
-  return clean_df
+  str_df = df.astype('str')
+  final_df = str_df.applymap(lambda x: x.strip() if isinstance(x, str) else x)
+  return final_df
 
 if __name__ == '__main__':
   main()
