@@ -1,6 +1,7 @@
-import streamlit as st
 import pandas as pd
-from pandas_profiling import ProfileReport
+import pandas_profiling
+import streamlit as st
+from streamlit_pandas_profiling import st_profile_report
 
 def main():
   st.title("台灣南島語-華語句庫資料集")
@@ -37,10 +38,10 @@ def main():
   pd.set_option('max_colwidth', 600)
 
   # display a data profile report 
-  profile = ProfileReport(df, title='Profiling Report', minimal=True)
-  # profile.to_widgets()
-  profile.to_notebook_iframe()
-
+  pr = df.profile_report()
+  st.title("原始資料統計結果")
+  st_profile_report(pr)
+  
   # set up filtering options
   sources = st.radio(
         "請選擇來源",
