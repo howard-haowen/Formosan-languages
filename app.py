@@ -1,11 +1,12 @@
 import streamlit as st
 import pandas as pd
+from pandas_profiling import ProfileReport
 
 def main():
   st.title("台灣南島語-華語句庫資料集")
   st.subheader("Dataset of Formosan-Mandarin sentence pairs")
   st.markdown(
-        """
+    """
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=howard-haowen.Formosan-languages)
 
 ### 原始碼
@@ -31,9 +32,16 @@ def main():
 - 💬 更多：句子太長時，將滑鼠移到句子上方即可檢視完整內容
 """
 )
-  
+  # fetch the raw data
   df = get_data()
   pd.set_option('max_colwidth', 600)
+
+  # display a data profile report 
+  profile = ProfileReport(df, title='Profiling Report', minimal=True)
+  profile.to_widgets()
+  # profile.to_notebook_iframe()
+
+  # set up filtering options
   sources = st.radio(
         "請選擇來源",
         options=['詞典', '文法', '句型', '生活會話', '九階教材'],
@@ -91,11 +99,15 @@ def main():
   elif langs == "布農":
     l_filt = df['Lang_En'] == "Bunun"
 
+  # filter the raw data based on user's input 
   filt_df = df[(s_filt) & (l_filt)]
+  
+  # display the filtered data
   zh_columns = {'Lang_Ch': '語言_方言', 'Ab': '族語', 'Ch': '華語', 'From': '來源'}
   filt_df.rename(columns=zh_columns, inplace=True)
   st.dataframe(filt_df)
 
+# Cache the raw data to speed up subseuqent requests 
 @st.cache
 def get_data():
   df = pd.read_pickle('Formosan-Mandarin_sent_pairs_updated.pkl')
