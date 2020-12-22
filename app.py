@@ -38,9 +38,11 @@ def main():
   # pd.set_option('max_colwidth', 600)
 
   # display a data profile report
-  report = ProfileReport(df, minimal=True).to_html()
-  components.html(report, width=600, height=1200, scrolling=True)
-  st.write("=============================")
+  report = ProfileReport(df, title='資料集統計', minimal=True).to_html()
+  components.html(report, width=800, height=1200, scrolling=True)
+  
+  divider = "="*20
+  st.write(divider)
   
   # set up filtering options
   sources = st.radio(
