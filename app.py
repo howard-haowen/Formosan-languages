@@ -39,7 +39,7 @@ def main():
 
   # display a data profile report
   report = ProfileReport(df, minimal=True).to_html()
-  components.html(report, scrolling=True)
+  components.html(report, width=600, height=1200, scrolling=True)
   st.write("=============================")
   
   # set up filtering options
