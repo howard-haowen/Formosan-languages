@@ -38,19 +38,19 @@ def main():
 
   # display a data profile report 
   profile = ProfileReport(df, title='Profiling Report', minimal=True)
-  profile.to_widgets()
-  # profile.to_notebook_iframe()
+  # profile.to_widgets()
+  profile.to_notebook_iframe()
 
   # set up filtering options
   sources = st.radio(
         "請選擇來源",
-        options=['詞典', '文法', '句型', '生活會話', '九階教材'],
+        options=['詞典','生活會話', '九階教材','文法','句型'],
         )
   langs = st.radio(
         "請選擇語言",
-        options=['撒奇萊雅','阿美','噶瑪蘭','魯凱','排灣','卑南',
-                 '賽德克','邵','拉阿魯哇','達悟','泰雅','太魯閣',
-                 '鄒','卡那卡那富','賽夏','布農'],
+        options=['布農','阿美','撒奇萊雅','噶瑪蘭','魯凱','排灣','卑南',
+                 '泰雅','賽德克','太魯閣','鄒','拉阿魯哇','卡那卡那富',
+                 '邵','賽夏','達悟'],
                  )
   
   # select a source
