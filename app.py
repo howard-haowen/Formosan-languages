@@ -40,7 +40,7 @@ def main():
   # display a data profile report
   report = ProfileReport(df, minimal=True).to_html()
   components.html(report, scrolling=True)
-  st.write(\n)
+  st.write("=============================")
   
   # set up filtering options
   sources = st.radio(
