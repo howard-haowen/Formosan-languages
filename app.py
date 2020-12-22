@@ -1,6 +1,6 @@
 import pandas as pd
-import pandas_profiling
 import streamlit as st
+from pandas_profiling import ProfileReport
 from streamlit_pandas_profiling import st_profile_report
 
 def main():
@@ -37,9 +37,9 @@ def main():
   df = get_data()
   # pd.set_option('max_colwidth', 600)
 
-  # display a data profile report 
-  pr = df.profile_report()
-  st_profile_report(pr)
+  # display a data profile report
+  profile = ProfileReport(df, minimal=True)
+  st_profile_report(profile)
   
   # set up filtering options
   sources = st.radio(
