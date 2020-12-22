@@ -37,11 +37,14 @@ def main():
   df = get_data()
   # pd.set_option('max_colwidth', 600)
 
+  zh_columns = {'Lang_En': 'Language','Lang_Ch': '語言_方言', 'Ab': '族語', 'Ch': '華語', 'From': '來源'}
+  df.rename(columns=zh_columns, inplace=True)
+  
   # display a data profile report
   report = ProfileReport(df, title='資料集統計', minimal=True).to_html()
   components.html(report, width=800, height=1200, scrolling=True)
   
-  divider = "="*20
+  divider = "="*50
   st.write(divider)
   
   # set up filtering options
@@ -58,56 +61,54 @@ def main():
   
   # select a source
   if sources == "詞典":
-    s_filt = df['From'] == "詞典"
+    s_filt = df['來源'] == "詞典"
   elif sources == "文法":
-    s_filt = df['From'] == "文法"
+    s_filt = df['來源'] == "文法"
   elif sources == "句型":
-    s_filt = df['From'] == "句型"
+    s_filt = df['來源'] == "句型"
   elif sources == "生活會話":
-    s_filt = df['From'] == "生活會話"
+    s_filt = df['來源'] == "生活會話"
   elif sources == "九階教材":
-    s_filt = df['From'] == "九階教材"
+    s_filt = df['來源'] == "九階教材"
   
   # select a language 
   if langs == "噶瑪蘭":
-    l_filt = df['Lang_En'] == "Kavalan"
+    l_filt = df['Language'] == "Kavalan"
   elif langs == "阿美":
-    l_filt = df['Lang_En'] == "Amis"
+    l_filt = df['Language'] == "Amis"
   elif langs == "撒奇萊雅":
-    l_filt = df['Lang_En'] == "Sakizaya"
+    l_filt = df['Language'] == "Sakizaya"
   elif langs == "魯凱":
-    l_filt = df['Lang_En'] == "Rukai"
+    l_filt = df['Language'] == "Rukai"
   elif langs == "排灣":
-    l_filt = df['Lang_En'] == "Paiwan"
+    l_filt = df['Language'] == "Paiwan"
   elif langs == "卑南":
-    l_filt = df['Lang_En'] == "Puyuma"
+    l_filt = df['Language'] == "Puyuma"
   elif langs == "賽德克":
-    l_filt = df['Lang_En'] == "Seediq"
+    l_filt = df['Language'] == "Seediq"
   elif langs == "邵":
-    l_filt = df['Lang_En'] == "Thao"
+    l_filt = df['Language'] == "Thao"
   elif langs == "拉阿魯哇":
-    l_filt = df['Lang_En'] == "Saaroa"
+    l_filt = df['Language'] == "Saaroa"
   elif langs == "達悟":
-    l_filt = df['Lang_En'] == "Yami"
+    l_filt = df['Language'] == "Yami"
   elif langs == "泰雅":
-    l_filt = df['Lang_En'] == "Atayal"
+    l_filt = df['Language'] == "Atayal"
   elif langs == "太魯閣":
-    l_filt = df['Lang_En'] == "Truku"
+    l_filt = df['Language'] == "Truku"
   elif langs == "鄒":
-    l_filt = df['Lang_En'] == "Tsou"
+    l_filt = df['Language'] == "Tsou"
   elif langs == "卡那卡那富":
-    l_filt = df['Lang_En'] == "Kanakanavu"
+    l_filt = df['Language'] == "Kanakanavu"
   elif langs == "賽夏":
-    l_filt = df['Lang_En'] == "Saisiyat"
+    l_filt = df['Language'] == "Saisiyat"
   elif langs == "布農":
-    l_filt = df['Lang_En'] == "Bunun"
+    l_filt = df['Language'] == "Bunun"
 
   # filter the raw data based on user's input 
   filt_df = df[(s_filt) & (l_filt)]
   
   # display the filtered data
-  zh_columns = {'Lang_Ch': '語言_方言', 'Ab': '族語', 'Ch': '華語', 'From': '來源'}
-  filt_df.rename(columns=zh_columns, inplace=True)
   st.dataframe(filt_df)
 
 # Cache the raw data to speed up subseuqent requests 
