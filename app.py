@@ -35,11 +35,10 @@ def main():
 )
   # fetch the raw data
   df = get_data()
-  pd.set_option('max_colwidth', 600)
+  # pd.set_option('max_colwidth', 600)
 
   # display a data profile report 
   pr = df.profile_report()
-  st.title("原始資料統計結果")
   st_profile_report(pr)
   
   # set up filtering options
