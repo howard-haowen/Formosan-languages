@@ -44,7 +44,7 @@ def main():
   report = ProfileReport(df, title='資料集統計', minimal=True).to_html()
   components.html(report, width=800, height=1200, scrolling=True)
   
-  divider = "="*50
+  divider = "="*80
   st.write(divider)
   
   # set up filtering options
