@@ -10,9 +10,6 @@ def main():
     """
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=howard-haowen.Formosan-languages)
 
-### 原始碼
-[GitHub頁面](https://github.com/howard-haowen/Formosan-languages)
-
 ### 資料集
 - 🎢 資料集合計`139102`筆句對
 - ‼️ 此查詢系統僅供教學與研究之用，內容版權歸原始資料提供者所有
