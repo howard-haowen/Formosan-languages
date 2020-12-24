@@ -1,2 +1,2 @@
-2020-12-21 Add pandas-profiling 
-2020-12-17 Streamlit app online
+2020-12-21 Added pandas-profiling 
+2020-12-17 Deployed Streamlit app
