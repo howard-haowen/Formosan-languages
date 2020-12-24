@@ -1,0 +1,2 @@
+2020-12-21 Add pandas-profiling 
+2020-12-17 Streamlit app online
