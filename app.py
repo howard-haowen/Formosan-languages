@@ -110,7 +110,7 @@ def main():
     """
 - 🔍 字串查詢支援[正則表達式](https://zh.wikipedia.org/zh-tw/正则表达式)
 - 🥳 族語範例: 使用`cia *`查詢布農語，能找到包含`danumcia`、`luduncia`或`siulcia`等詞的句子
-- 🤩 華語範例: 使用`^有一`查詢華語，能找到包含`有一天`、`有一塊`或`有一晚`等詞的句子
+- 🤩 華語範例: 使用`^有一`查詢華語，能找到使用`有一天`、`有一塊`或`有一晚`等詞出現在句首的句子
 """
 )
   # search for keywords in Mandarin or Formosan 
