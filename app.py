@@ -111,8 +111,14 @@ def main():
   elif langs == "布農":
     l_filt = df['Language'] == "Bunun"
   
-  # filter the raw data based on, sources, languages, Mandarin texts, or Formosan texts
-  filt_df = df[(s_filt)|(l_filt)|(zh_query)|(ab_query)]
+  # filter the raw data based on Mandarin OR Formosan texts
+  texts = (zh_query)|(ab_query)
+  
+  # filter the raw data based on sources AND languages
+  selections = (s_filt)&(l_filt)
+  
+  # get the final result based on "texts" AND selections
+  filt_df = df[(texts)&(selections)]
   
   # display the filtered data
   st.dataframe(filt_df)
