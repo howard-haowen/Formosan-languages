@@ -55,6 +55,15 @@ def main():
                  '泰雅','賽德克','太魯閣','鄒','拉阿魯哇','卡那卡那富',
                  '邵','賽夏','達悟'],
                  )
+  zh_text = st.text_input('在此輸入中文以查詢資料集')
+  ab_text = st.text_input('在此輸入族語以查詢資料集')
+
+  
+  # search for Mandarin texts 
+  zh_query = df['華語'].str.contains(zh_text)
+    
+  # search for Mandarin texts 
+  ab_query = df['族語'].str.contains(ab_text)
   
   # select a source
   if sources == "詞典":
@@ -101,9 +110,9 @@ def main():
     l_filt = df['Language'] == "Saisiyat"
   elif langs == "布農":
     l_filt = df['Language'] == "Bunun"
-
-  # filter the raw data based on user's input 
-  filt_df = df[(s_filt) & (l_filt)]
+  
+  # filter the raw data based on, sources, languages, Mandarin texts, or Formosan texts
+  filt_df = df[(s_filt)|(l_filt)|(zh_query)|(ab_query)]
   
   # display the filtered data
   st.dataframe(filt_df)
