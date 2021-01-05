@@ -111,7 +111,7 @@ def main():
 # Cache the raw data to speed up subseuqent requests 
 @st.cache
 def get_data():
-  df = pd.read_pickle('Formosan-Mandarin_sent_pairs_139023entries')
+  df = pd.read_pickle('Formosan-Mandarin_sent_pairs_139023entries.pkl')
   del df['Num']
   str_df = df.astype('str')
   final_df = str_df.applymap(lambda x: x.strip() if isinstance(x, str) else x)
