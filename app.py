@@ -47,23 +47,29 @@ def main():
   # set up filtering options
   sources = st.radio(
         "請選擇來源",
-        options=['詞典','生活會話', '九階教材','文法','句型'],
+        options=['詞典','生活會話', '九階教材','文法','句型','所有來源'],
         )
   langs = st.radio(
         "請選擇語言",
         options=['布農','阿美','撒奇萊雅','噶瑪蘭','魯凱','排灣','卑南',
                  '泰雅','賽德克','太魯閣','鄒','拉阿魯哇','卡那卡那富',
-                 '邵','賽夏','達悟'],
+                 '邵','賽夏','達悟', '所有語言'],
                  )
   zh_text = st.text_input('在此輸入中文以查詢資料集')
   ab_text = st.text_input('在此輸入族語以查詢資料集')
 
   
-  # search for Mandarin texts 
-  zh_query = df['華語'].str.contains(zh_text)
+  # search for Mandarin texts
+  if zh_text:
+    zh_query = df['華語'].str.contains(zh_text)
+  else: 
+    zh_query = None
     
-  # search for Mandarin texts 
-  ab_query = df['族語'].str.contains(ab_text)
+  # search for Formosan texts
+  if ab_text:
+    ab_query = df['族語'].str.contains(ab_text)
+  else: 
+    ab_query = None
   
   # select a source
   if sources == "詞典":
@@ -76,6 +82,8 @@ def main():
     s_filt = df['來源'] == "生活會話"
   elif sources == "九階教材":
     s_filt = df['來源'] == "九階教材"
+  else:
+    s_filt = None
   
   # select a language 
   if langs == "噶瑪蘭":
@@ -110,15 +118,11 @@ def main():
     l_filt = df['Language'] == "Saisiyat"
   elif langs == "布農":
     l_filt = df['Language'] == "Bunun"
+  else:
+    l_filt = None
   
-  # filter the raw data based on Mandarin OR Formosan texts
-  texts = (zh_query)|(ab_query)
-  
-  # filter the raw data based on sources AND languages
-  selections = (s_filt)&(l_filt)
-  
-  # get the final result based on "texts" AND selections
-  filt_df = df[(texts)&(selections)]
+  # filter the data based on all criteria
+  filt_df = df[(zh_query)&(ab_query)&(s_filt)&(l_filt)]
   
   # display the filtered data
   st.dataframe(filt_df)
