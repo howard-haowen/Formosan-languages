@@ -105,7 +105,11 @@ def main():
   
   # create a text box for keyword search
   text_box = st.text_input('關鍵詞查詢：在此輸入華語或族語')
-
+  st.markdown(
+    """
+- 🔍 字串查詢支援[正則表達式](https://zh.wikipedia.org/wiki/正则表达式)
+"""
+)
   # search for keywords in Mandarin or Formosan 
   t_filt = df[texts].str.contains(text_box)
   
