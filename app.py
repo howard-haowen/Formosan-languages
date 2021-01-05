@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st
 import streamlit.components.v1 as components
+import re
 from pandas_profiling import ProfileReport
 
 def main():
@@ -107,11 +108,13 @@ def main():
   text_box = st.text_input('關鍵詞查詢：在此輸入華語或族語')
   st.markdown(
     """
-- 🔍 字串查詢支援[正則表達式](https://zh.wikipedia.org/wiki/正则表达式)
+- 🔍 字串查詢支援[正則表達式](https://zh.wikipedia.org/zh-tw/正则表达式)
+- 🥳 族語範例: 使用`cia *`查詢布農語，能找到包含`danumcia`、`luduncia`或`siulcia`等詞的句子
+- 🤩 華語範例: 使用`^有一`查詢華語，能找到包含`有一天`、`有一塊`或`有一晚`等詞的句子
 """
 )
   # search for keywords in Mandarin or Formosan 
-  t_filt = df[texts].str.contains(text_box)
+  t_filt = df[texts].str.contains(text_box, flags=re.IGNORECASE)
   
   # filter the data based on all criteria
   filt_df = df[(s_filt)&(l_filt)&(t_filt)]
