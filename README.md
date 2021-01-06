@@ -10,8 +10,6 @@
 - ‼️ 此查詢系統僅供教學與研究之用，內容版權歸原始資料提供者所有
 - 💻 隨機顯示10筆資料
 ![data_sample](sample-dataframe.png)
-- 💻 資料統計
-<iframe width="960" height="720" src="https://datastudio.google.com/embed/reporting/843e036f-ed11-4f15-97a9-03ee8c21e8a0/page/4WarB" frameborder="0" style="border:0" allowfullscreen></iframe>
 
 
 ## 資料來源
