@@ -126,9 +126,12 @@ def main():
 @st.cache
 def get_data():
   df = pd.read_pickle('Formosan-Mandarin_sent_pairs_139023entries.pkl')
-  str_df = df.astype('str')
-  final_df = str_df.applymap(lambda x: x.strip() if isinstance(x, str) else x)
-  return final_df
+  df = df.astype('str')
+  df = df.applymap(lambda x: x.strip() if isinstance(x, str) else x)
+  filt = df.Ch == "-"
+  df = df[~filt] # remove ungrammatical sentences in the grammar book of Katripul Puyuma 
+
+  return df
 
 if __name__ == '__main__':
   main()
