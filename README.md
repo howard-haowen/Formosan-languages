@@ -26,4 +26,4 @@
 [![pandas-profile](Pandas-profile-screenshot.png)](https://howard-haowen.github.io/Formosan-languages/Pandas-profile-report-of-the-dataset.html)
 
 ***
-![](https://octodex.github.com/images/yaktocat.png =100x20)
+![](https://octodex.github.com/images/yaktocat.png)
