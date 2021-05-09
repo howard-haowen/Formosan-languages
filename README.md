@@ -23,6 +23,8 @@
    + 詞典資料是透過`PDFMiner` 將2019版的PDF檔轉成HTML，再用`BeautifulSoup`抓取句對，偶爾會出現族語跟華語對不上的情形。若發現錯誤，請[聯絡我📩](https://github.com/howard-haowen)。詞典中重複出現的句子已從資料集中刪除。
 
 ## 統計報告
+- 💻 點擊下面的預覽圖即可進入統計報告互動式查看頁面。
+
 [![pandas-profile](Pandas-profile-screenshot.png)](https://howard-haowen.github.io/Formosan-languages/Pandas-profile-report-of-the-dataset.html)
 
 ***
