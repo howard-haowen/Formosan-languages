@@ -55,7 +55,7 @@ def main():
         options=['華語','族語'],)
     
   # filter by sources
-  s_filt = df['來源'] in sources
+  s_filt = df['來源'].isin(sources)
   
   # select a language 
   if langs == "噶瑪蘭":
