@@ -39,15 +39,15 @@ def main():
   df.rename(columns=zh_columns, inplace=True)
   
   # set up filtering options
-  sources = st.radio(
+  sources = st.sidebar.radio(
         "請選擇來源",
         options=['詞典','生活會話', '九階教材','文法','句型'],)
-  langs = st.radio(
+  langs = st.sidebar.selectbox(
         "請選擇語言",
         options=['布農','阿美','撒奇萊雅','噶瑪蘭','魯凱','排灣','卑南',
                  '泰雅','賽德克','太魯閣','鄒','拉阿魯哇','卡那卡那富',
                  '邵','賽夏','達悟'],)
-  texts = st.radio(
+  texts = st.sidebar.radio(
         "請選擇查詢文字類別",
         options=['華語','族語'],)
     
