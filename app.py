@@ -34,14 +34,17 @@ def main():
   # fetch the raw data
   df = get_data()
   # pd.set_option('max_colwidth', 600)
-
+  
+  # remap column names
   zh_columns = {'Lang_En': 'Language','Lang_Ch': '語言_方言', 'Ab': '族語', 'Ch': '華語', 'From': '來源'}
   df.rename(columns=zh_columns, inplace=True)
   
   # set up filtering options
-  sources = st.sidebar.radio(
+  source_set = df['來源'].unique()
+  sources = st.sidebar.multiselect(
         "請選擇來源",
-        options=['詞典','生活會話', '九階教材','文法','句型'],)
+        options=source_set,
+        default='詞典',)
   langs = st.sidebar.selectbox(
         "請選擇語言",
         options=['布農','阿美','撒奇萊雅','噶瑪蘭','魯凱','排灣','卑南',
@@ -51,17 +54,8 @@ def main():
         "請選擇查詢文字類別",
         options=['華語','族語'],)
     
-  # select a source
-  if sources == "詞典":
-    s_filt = df['來源'] == "詞典"
-  elif sources == "文法":
-    s_filt = df['來源'] == "文法"
-  elif sources == "句型":
-    s_filt = df['來源'] == "句型"
-  elif sources == "生活會話":
-    s_filt = df['來源'] == "生活會話"
-  elif sources == "九階教材":
-    s_filt = df['來源'] == "九階教材"
+  # filter by sources
+  s_filt = df['來源'] in sources
   
   # select a language 
   if langs == "噶瑪蘭":
@@ -98,7 +92,7 @@ def main():
     l_filt = df['Language'] == "Bunun"
   
   # create a text box for keyword search
-  text_box = st.text_input('關鍵詞查詢：在此輸入華語或族語')
+  text_box = st.text_input('關鍵詞查詢：在此輸入華語或族語，按下ENTER後會自動更新查詢結果。')
   st.markdown(
     """
 - 🔍 字串查詢支援[正則表達式](https://zh.wikipedia.org/zh-tw/正则表达式)
