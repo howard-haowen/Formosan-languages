@@ -38,13 +38,6 @@ def main():
   zh_columns = {'Lang_En': 'Language','Lang_Ch': '語言_方言', 'Ab': '族語', 'Ch': '華語', 'From': '來源'}
   df.rename(columns=zh_columns, inplace=True)
   
-  # display a data profile report
-  report = ProfileReport(df, title='資料集統計', minimal=True).to_html()
-  components.html(report, width=800, height=1200, scrolling=True)
-  
-  divider = "="*80
-  st.write(divider)
-  
   # set up filtering options
   sources = st.radio(
         "請選擇來源",
@@ -119,9 +112,23 @@ def main():
   # filter the data based on all criteria
   filt_df = df[(s_filt)&(l_filt)&(t_filt)]
   
+  st.markdown(
+    """
+### 查詢結果
+"""
+)
   # display the filtered data
   st.dataframe(filt_df)
-
+ 
+  st.markdown(
+    """
+### 資料集統計結果
+"""
+)
+  # display a data profile report
+  report = ProfileReport(df, title='資料集統計', minimal=True).to_html()
+  components.html(report, width=800, height=1200, scrolling=True)  
+  
 # Cache the raw data to speed up subseuqent requests 
 @st.cache
 def get_data():
