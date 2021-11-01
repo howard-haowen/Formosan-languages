@@ -92,7 +92,7 @@ def main():
     l_filt = df['Language'] == "Bunun"
   
   # create a text box for keyword search
-  text_box = st.text_input('關鍵詞查詢：在此輸入華語或族語，按下ENTER後會自動更新查詢結果。')
+  text_box = st.text_input('關鍵詞查詢：可輸入華語或族語，按下ENTER後會自動更新查詢結果。')
   st.markdown(
     """
 - 🔍 字串查詢支援[正則表達式](https://zh.wikipedia.org/zh-tw/正则表达式)
