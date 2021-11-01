@@ -4,7 +4,7 @@
 
 ## 基本說明
 
-<!--- > [點我](https://share.streamlit.io/howard-haowen/formosan-languages/main/app.py)-->
+[點我進入互動式查詢系統](https://share.streamlit.io/howard-haowen/formosan-languages/main/app.py)
 
 - 🎢 資料集合計`139102`筆句對。
 - ‼️ 此查詢系統僅供教學與研究之用，內容版權歸原始資料提供者所有
