@@ -114,7 +114,7 @@ def main():
 """
 )
   # display the filtered data
-  st.dataframe(filt_df)
+  st.dataframe(filt_df, 800, 800)
  
   st.markdown(
     """
@@ -122,10 +122,10 @@ def main():
 """
 )
   # display a data profile report
-  report = ProfileReport(df, title='資料集統計', minimal=True).to_html()
-  components.html(report, width=800, height=1200, scrolling=True)  
+  report = get_report()
+  components.html(report, width=800, height=800, scrolling=True)  
   
-# Cache the raw data to speed up subseuqent requests 
+# Cache the raw data and profile report to speed up subseuqent requests 
 @st.cache
 def get_data():
   df = pd.read_pickle('Formosan-Mandarin_sent_pairs_139023entries.pkl')
@@ -134,8 +134,13 @@ def get_data():
   df = df.applymap(lambda x: x.strip())
   filt = df.Ch.apply(len) < 5
   df = df[~filt]
-
   return df
+
+@st.cache
+def get_report():
+  df = get_data()
+  report = ProfileReport(df, title='Report', minimal=True).to_html()
+  return report
 
 if __name__ == '__main__':
   main()
