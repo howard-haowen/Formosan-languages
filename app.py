@@ -27,10 +27,16 @@ def main():
 ### 查詢方法
 - 🔭 過濾：使用左側欄功能選單可過濾資料來源(可多選)與語言，也可使用華語或族語進行關鍵詞查詢。
   - 🔍 關鍵詞查詢支援[正則表達式](https://zh.wikipedia.org/zh-tw/正则表达式)。
-    - 🥳 族語範例: 使用`cia *`查詢布農語，能找到包含`danumcia`、`luduncia`或`siulcia`等詞的句子。
-    - 🤩 華語範例: 使用`^有一`查詢華語，能找到使用`有一天`、`有一塊`或`有一晚`等詞出現在句首的句子。
-- 📚 排序：點選首欄。例如點選`族語`欄位，資料集便會根據族語重新排序。
+  - 🥳 族語範例: 
+    + 使用`cia *`查詢布農語，能找到包含`danumcia`、`luduncia`或`siulcia`等詞的句子。
+    + 使用`[a-z]{15,}`查詢任何族語，能找到包含15個字母以上單詞的句子，方便過濾長詞。
+  - 🤩 華語範例: 
+    + 使用`^有一`查詢華語，能找到使用`有一天`、`有一塊`或`有一晚`等詞出現在句首的句子。
+    + 使用`[0-9]{1,}`查詢華語，能找到包含羅馬數字的句子，如`我今年16歲了`。
+- 📚 排序：點選標題列。例如點選`族語`欄位標題列內的任何地方，資料集便會根據族語重新排序。
+- 💬 更多：文字長度超過欄寬時，將滑鼠滑到欄位上方即可顯示完整文字。
 - 🥅 放大：點選表格右上角↘️進入全螢幕模式，再次點選↘️返回主頁。
+
 """
 )
   # fetch the raw data
@@ -126,7 +132,6 @@ def get_data():
   df = df.astype(str, errors='ignore')
   df = df.applymap(lambda x: x[1:] if x.startswith(".") else x)
   df = df.applymap(lambda x: x.strip())
-  #df = df.applymap(lambda x: x.strip() if isinstance(x, str) else x)
   filt = df.Ch.apply(len) < 5
   df = df[~filt]
 
