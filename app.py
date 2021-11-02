@@ -114,7 +114,7 @@ def main():
 """
 )
   # display the filtered data
-  st.dataframe(filt_df, 800, 800)
+  st.dataframe(filt_df, 800, 400)
  
   st.markdown(
     """
