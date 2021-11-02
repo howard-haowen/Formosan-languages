@@ -11,24 +11,26 @@ def main():
     """
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=howard-haowen.Formosan-languages)
 
-### 資料集
-- 🎢 資料集合計`139023`筆句對
-- ‼️ 此查詢系統僅供教學與研究之用，內容版權歸原始資料提供者所有
+### 資料概要
+- 🎢 資料集合計約13萬筆台灣南島語-華語句對
+- ⚠️ 此查詢系統僅供教學與研究之用，內容版權歸原始資料提供者所有
 
 ### 資料來源
-- 🥅 九階教材: [族語E樂園](http://web.klokah.tw)
-- 💬 生活會話: [族語E樂園](http://web.klokah.tw)
-- 🧗 句型: [族語E樂園](http://web.klokah.tw)
-- 🔭 文法: [臺灣南島語言叢書](https://alilin.apc.gov.tw/tw/)
-   + 以上來源的資料是透過網路爬蟲取得。
-- 📚 詞典: [原住民族語言線上詞典](https://e-dictionary.apc.gov.tw/Index.htm?fbclid=IwAR18XBJPj2xs7nhpPlIUZ-P3joQRGXx22rbVcUvp14ysQu6SdrWYvo7gWCc)
-   + 詞典資料是透過`PDFMiner` 將2019版的PDF檔轉成HTML，再用`BeautifulSoup`抓取句對，偶爾會出現族語跟華語對不上的情形。若發現錯誤，請[聯絡我📩](https://github.com/howard-haowen)。詞典中重複出現的句子已從資料集中刪除。
+- 以下資料經由網路爬蟲取得。
+   + 🥅 九階教材: [族語E樂園](http://web.klokah.tw)
+   + 💬 生活會話: [族語E樂園](http://web.klokah.tw)
+   + 🧗 句型: [族語E樂園](http://web.klokah.tw)
+   + 🔭 文法: [臺灣南島語言叢書](https://alilin.apc.gov.tw/tw/)
+- 詞典資料使用`PDFMiner` 將2019版的PDF檔轉成HTML，再用`BeautifulSoup`抓取句對，偶爾會出現族語跟華語對不上的情形。若發現錯誤，請[聯絡我📩](https://github.com/howard-haowen)。詞典中重複出現的句子已從資料集中刪除。
+   + 📚 詞典: [原住民族語言線上詞典](https://e-dictionary.apc.gov.tw/Index.htm?fbclid=IwAR18XBJPj2xs7nhpPlIUZ-P3joQRGXx22rbVcUvp14ysQu6SdrWYvo7gWCc)
 
-### 使用方法
-- 🔭 過濾：選擇來源與語言
-- 📚 排序：點選首欄
-- 🥅 放大：點選表格右上角進入全螢幕模式
-- 💬 更多：句子太長時，將滑鼠移到句子上方即可檢視完整內容
+### 查詢方法
+- 🔭 過濾：使用左側欄功能選單可過濾資料來源(可多選)與語言，也可使用華語或族語進行關鍵詞查詢。
+  - 🔍 關鍵詞查詢支援[正則表達式](https://zh.wikipedia.org/zh-tw/正则表达式)。
+    - 🥳 族語範例: 使用`cia *`查詢布農語，能找到包含`danumcia`、`luduncia`或`siulcia`等詞的句子。
+    - 🤩 華語範例: 使用`^有一`查詢華語，能找到使用`有一天`、`有一塊`或`有一晚`等詞出現在句首的句子。
+- 📚 排序：點選首欄。例如點選`族語`欄位，資料集便會根據族語重新排序。
+- 🥅 放大：點選表格右上角↘️進入全螢幕模式，再次點選↘️返回主頁。
 """
 )
   # fetch the raw data
@@ -42,7 +44,7 @@ def main():
   # set up filtering options
   source_set = df['來源'].unique()
   sources = st.sidebar.multiselect(
-        "請選擇來源",
+        "請選擇資料來源",
         options=source_set,
         default='詞典',)
   langs = st.sidebar.selectbox(
@@ -51,7 +53,7 @@ def main():
                  '泰雅','賽德克','太魯閣','鄒','拉阿魯哇','卡那卡那富',
                  '邵','賽夏','達悟'],)
   texts = st.sidebar.radio(
-        "請選擇查詢文字類別",
+        "請選擇關鍵詞查詢文字類別",
         options=['華語','族語'],)
     
   # filter by sources
@@ -92,14 +94,8 @@ def main():
     l_filt = df['Language'] == "Bunun"
   
   # create a text box for keyword search
-  text_box = st.sidebar.text_input('關鍵詞查詢：可輸入華語或族語，按下ENTER後會自動更新查詢結果。')
-  st.markdown(
-    """
-- 🔍 字串查詢支援[正則表達式](https://zh.wikipedia.org/zh-tw/正则表达式)
-- 🥳 族語範例: 使用`cia *`查詢布農語，能找到包含`danumcia`、`luduncia`或`siulcia`等詞的句子
-- 🤩 華語範例: 使用`^有一`查詢華語，能找到使用`有一天`、`有一塊`或`有一晚`等詞出現在句首的句子
-"""
-)
+  text_box = st.sidebar.text_input('在下方輸入華語或族語，按下ENTER後便會自動更新查詢結果')
+
   # search for keywords in Mandarin or Formosan 
   t_filt = df[texts].str.contains(text_box, flags=re.IGNORECASE)
   
@@ -116,7 +112,7 @@ def main():
  
   st.markdown(
     """
-### 資料集統計結果
+### 資料統計
 """
 )
   # display a data profile report
@@ -127,10 +123,12 @@ def main():
 @st.cache
 def get_data():
   df = pd.read_pickle('Formosan-Mandarin_sent_pairs_139023entries.pkl')
-  df = df.astype('str')
-  df = df.applymap(lambda x: x.strip() if isinstance(x, str) else x)
-  filt = df.Ch == "-"
-  df = df[~filt] # remove ungrammatical sentences in the grammar book of Katripul Puyuma 
+  df = df.astype(str, errors='ignore')
+  df = df.applymap(lambda x: x[1:] if x.startswith(".") else x)
+  df = df.applymap(lambda x: x.strip())
+  #df = df.applymap(lambda x: x.strip() if isinstance(x, str) else x)
+  filt = df.Ch.apply(len) < 5
+  df = df[~filt]
 
   return df
 
