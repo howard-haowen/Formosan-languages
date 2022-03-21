@@ -1,4 +1,3 @@
-![visitors](https://visitor-badge.glitch.me/badge?page_id=howard-haowen.Formosan-languages)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/howard-haowen/Formosan-languages/HEAD)
 
 # 台灣南島語-華語句庫資料集(Dataset of Formosan-Mandarin sentence pairs)
