@@ -21,10 +21,6 @@
 
 ## 統計報告
 
-### 基本統計
-<iframe width="600" height="450" src="https://datastudio.google.com/embed/reporting/843e036f-ed11-4f15-97a9-03ee8c21e8a0/page/4WarB" frameborder="0" style="border:0" allowfullscreen></iframe>
-
-### 進階統計
 - 💻 點擊下面的預覽圖即可進入統計報告互動式查看頁面。報告中新增`word_counts`欄位，計算族語句子的字數。
 
 [![pandas-profile](Pandas-profile-screenshot.png)](https://howard-haowen.github.io/Formosan-languages/Pandas-profile-report-of-the-dataset.html)
