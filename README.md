@@ -1,7 +1,9 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/howard-haowen/Formosan-languages/HEAD)
 
-# 台灣南島語-華語句庫資料集(Dataset of Formosan-Mandarin sentence pairs)
-[點我進入互動式查詢系統](https://share.streamlit.io/howard-haowen/formosan-languages/main/app.py)
+# 台灣南島語-華語句庫資料集
+(Dataset of Formosan-Mandarin sentence pairs)
+
+[點我](https://share.streamlit.io/howard-haowen/formosan-languages/main/app.py)進入互動式查詢系統
 
 ## 資料概要
 - 🎢 資料集合計約13萬筆台灣南島語-華語句對
@@ -19,7 +21,6 @@
    + 📚 詞典: [原住民族語言線上詞典](https://e-dictionary.apc.gov.tw/Index.htm?fbclid=IwAR18XBJPj2xs7nhpPlIUZ-P3joQRGXx22rbVcUvp14ysQu6SdrWYvo7gWCc)
 
 ## 統計報告
-
 - 💻 點擊下面的預覽圖即可進入統計報告互動式查看頁面。報告中新增`word_counts`欄位，計算族語句子的字數。
 
 [![pandas-profile](Pandas-profile-screenshot.png)](https://howard-haowen.github.io/Formosan-languages/Pandas-profile-report-of-the-dataset.html)
