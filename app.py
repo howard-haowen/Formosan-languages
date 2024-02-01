@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 import streamlit.components.v1 as components
 import re
-from pandas_profiling import ProfileReport
+#from pandas_profiling import ProfileReport
 
 def main():
   st.title("台灣南島語-華語句庫資料集")
@@ -122,8 +122,8 @@ def main():
 """
 )
   # display a data profile report
-  report = get_report()
-  components.html(report, width=800, height=800, scrolling=True)  
+  #report = get_report()
+  #components.html(report, width=800, height=800, scrolling=True)  
   
 # Cache the raw data and profile report to speed up subseuqent requests 
 @st.cache
@@ -136,11 +136,13 @@ def get_data():
   df = df[~filt]
   return df
 
+""" 
 @st.cache
 def get_report():
   df = get_data()
   report = ProfileReport(df, title='Report', minimal=True).to_html()
   return report
+"""
 
 if __name__ == '__main__':
   main()
